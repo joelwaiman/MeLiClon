@@ -5,9 +5,9 @@ import mlpng from '../../Assets/mlpng.png'
 const Header = () => {
 
     const categorys = [
-        { name: 1, id: 0 },
-        { name: 2, id: 1 },
-        { name: 3, id: 2 }
+        { name: 'Moda', id: 0 },
+        { name: 'Electronica', id: 1 },
+        { name: 'Deporte', id: 2 }
     ]
 
     return (
@@ -17,11 +17,15 @@ const Header = () => {
                 <input style={styles.input} />
                 <button style={styles.button} />
             </div>
-            <nav style={styles.container2}>
-                {categorys.map((category) => {
-                    return <NavLink key={category.id}>{category.name}</NavLink>
-                })}
-            </nav>
+            <div style={styles.container2}>
+                <p>Enviar a Konoha</p>
+                <nav style={styles.categorys}>
+                    {categorys.map((category) => {
+                        return <NavLink key={category.id}>{category.name}</NavLink>
+                    })}
+                </nav>
+                <p>Cart</p>
+            </div>
         </header>
     )
 }
@@ -67,8 +71,11 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         maxWidth: 950,
-        margin: 'auto'
+        margin: '0 0 0 110px',
     },
+    categorys:{
+        textDecoration: 'none'
+    }
 }
