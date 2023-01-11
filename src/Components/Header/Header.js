@@ -85,9 +85,9 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-between',
         maxWidth: 950,
-        margin: '10px 0 10px 375px',
+        margin: '10px 0 10px 380px',
         color: '#3339'
     },
     location:{
