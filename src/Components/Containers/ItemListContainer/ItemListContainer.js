@@ -1,10 +1,13 @@
 import React from "react";
+import Item from "./Item";
 
-const ItemListContainer = ()=>{
+const ItemListContainer = ({pokemons})=>{
 
     return(
         <div style={styles.background}>
-            <h1>Hola Mundo</h1>
+            {pokemons.map((poki)=>{
+                return <Item key={poki.id} pokemons={poki} />
+            })}
         </div>
     )
 }
