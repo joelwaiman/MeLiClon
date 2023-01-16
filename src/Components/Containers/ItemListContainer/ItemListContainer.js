@@ -1,13 +1,13 @@
 import React from "react";
 import Item from "./Item";
 
-const ItemListContainer = ({pokemons})=>{
-
+const ItemListContainer = ({ products })=>{
+    console.log(products);
     return(
         <div style={styles.background}>
-            {pokemons.map((poki)=>{
-                return <Item key={poki.id} pokemons={poki} />
-            })}
+             {products.map((item)=>{
+                return <Item key={item.id} item={item} />
+             })}
         </div>
     )
 }
@@ -19,7 +19,7 @@ const styles = {
         backgroundColor: '#FFFFFF',
         borderRadius: 3,
         maxWidth: 744,
-        height: '90vh',
+        height: '90%',
         margin: '15px auto'
     }
 }

@@ -2,28 +2,24 @@ import React, {useEffect, useState} from "react";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 
 const ContainerMain = ()=>{
-    const [pokemons, setPokemons] = useState([])
+    const [products, setProducts] = useState([])
 
     useEffect(()=>{
         const getProducts = async () => {
             try {
-              const res = await fetch('https://pokeapi.co/api/v2/pokemon/');
+              const res = await fetch('https://fakestoreapi.com/products');
               const data = await res.json();
-              const poke = data.map(item => {
-                return {...item}
-              });
-              console.log(poke);
-              setPokemons(poke);
+              setProducts(data);
             } catch {
               console.log("error");
             }
           };
           getProducts();
-    });
+    }, []);
     
     return(
         <div>
-            <ItemListContainer pokemons={pokemons} />
+            <ItemListContainer products={products}/>
         </div>
     )
 }
