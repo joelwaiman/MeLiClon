@@ -8,28 +8,31 @@ import SearchIcon from '@mui/icons-material/Search';
 const Header = () => {
 
     const categorys = [
-        { name: 'Moda', id: 0 },
-        { name: 'Electronica', id: 1 },
-        { name: 'Deporte', id: 2 }
+        { name: "electronics", id: 0, ruta: "/categoria/electronics" },
+        { name: "jewelery", id: 1, ruta: "/categoria/jewelery" },
+        { name: "men's clothing", id: 2, ruta: "/categoria/men's clothing" },
+        { name: "women's clothing", id: 3, ruta: "/categoria/women's clothing" }
     ]
 
     return (
         <header style={styles.header}>
             <div style={styles.container1}>
-                <img style={styles.img} src={mlpng} />
+                <Link to="/">
+                    <img style={styles.img} src={mlpng} />
+                </Link>
                 <input placeholder="Que estas buscando?" style={styles.input} />
                 <button style={styles.button}>
-                    <SearchIcon/>
+                    <SearchIcon />
                 </button>
             </div>
             <div style={styles.container2}>
                 <div style={styles.location}>
-                   <LocationOnIcon />
-                   <p>Enviar a Konoha</p>
+                    <LocationOnIcon />
+                    <p>Enviar a Konoha</p>
                 </div>
                 <nav>
                     {categorys.map((category) => {
-                        return <NavLink  style={styles.categorys} key={category.id}>{category.name}</NavLink>
+                        return <NavLink style={styles.categorys} key={category.id} to={category.ruta}>{category.name}</NavLink>
                     })}
                 </nav>
                 <ShoppingCartIcon />
@@ -77,7 +80,7 @@ const styles = {
         padding: '20px 5px',
         border: 'transparent',
         borderRadius: 5,
-        alignItems:'center',
+        alignItems: 'center',
         justifyContent: 'center',
         color: '#adadad'
     },
@@ -90,12 +93,12 @@ const styles = {
         margin: '10px 0 10px 380px',
         color: '#3339'
     },
-    location:{
+    location: {
         display: 'flex',
-        flexDirection:'row',
-        alignItems:'center',
+        flexDirection: 'row',
+        alignItems: 'center',
     },
-    categorys:{
+    categorys: {
         textDecoration: 'none',
         color: '#3339',
         margin: '0 10px'

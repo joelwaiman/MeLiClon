@@ -2,7 +2,6 @@ import React from "react";
 import Item from "./Item";
 
 const ItemListContainer = ({ products })=>{
-    console.log(products);
     return(
         <div style={styles.background}>
              {products.map((item)=>{
