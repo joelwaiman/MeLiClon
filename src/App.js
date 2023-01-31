@@ -13,9 +13,8 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<ContainerMain />}/>
-            <Route path="/categoria/:id" element={<CustomProvide />}/>
+            <Route path="/categoria/:id" element={<ContainerMain />}/>
           </Routes>
-          <ContainerMain />
         </CustomProvide>
       </BrowserRouter>
     </StrictMode>
