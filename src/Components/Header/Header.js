@@ -8,10 +8,10 @@ import SearchIcon from '@mui/icons-material/Search';
 const Header = () => {
 
     const categorys = [
-        { name: "electronics", id: 0, ruta: "/categoria/electronics" },
-        { name: "jewelery", id: 1, ruta: "/categoria/jewelery" },
-        { name: "men's clothing", id: 2, ruta: "/categoria/men's clothing" },
-        { name: "women's clothing", id: 3, ruta: "/categoria/women's clothing" }
+        { name: "Electronics", id: 0, ruta: "/categoria/electronics" },
+        { name: "Jewelery", id: 1, ruta: "/categoria/jewelery" },
+        { name: "Men's clothing", id: 2, ruta: "/categoria/men's clothing" },
+        { name: "Women's clothing", id: 3, ruta: "/categoria/women's clothing" }
     ]
 
     return (

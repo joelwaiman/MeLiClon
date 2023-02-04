@@ -1,11 +1,12 @@
-import React, {useContext, useEffect} from "react";
+import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Context } from "../../../CustomContext";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
+import { Skeleton } from "@mui/material";
 
-const ContainerMain = ()=>{
+const ContainerMain = () => {
 
-  const {products, loading, setLoading, setProducts} = useContext(Context)
+  const { products, loading, setLoading, setProducts } = useContext(Context)
   const { id } = useParams()
   console.log(id);
 
@@ -15,7 +16,7 @@ const ContainerMain = ()=>{
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await fetch(id? URL_CAT : URL_BASE);
+        const res = await fetch(id ? URL_CAT : URL_BASE);
         const data = await res.json();
         setProducts(data);
       } catch {
@@ -27,13 +28,15 @@ const ContainerMain = ()=>{
     };
     getProducts();
   }, [id, URL_CAT, URL_BASE]);
-  
-    return(
-        <div>
-          {loading? <h2>Cargando...</h2> : <ItemListContainer products={products}/>}
-            
-        </div>
-    )
+
+  return (
+    <div>
+      {loading ? (
+        <Skeleton sx={{ margin: 'auto', opacity: 0.7}} width="100vw" height="100vh" animation="wave" variant="rectangular" />
+      ) : 
+      <ItemListContainer products={products} />}
+    </div>
+  )
 }
 
 export default ContainerMain;
