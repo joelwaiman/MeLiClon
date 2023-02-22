@@ -1,11 +1,16 @@
-import React from "react"
+import React, { useContext, useState } from "react"
 import { NavLink, Link } from "react-router-dom"
 import mlpng from '../../Assets/mlpng.png'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SearchIcon from '@mui/icons-material/Search';
+import { Context } from "../../CustomContext";
 
 const Header = () => {
+
+    const {products, setProducts} = useContext(Context)
+    const [inputValue, setInputValue] = useState('')
+    console.log('desde header', products);
 
     const categorys = [
         { name: "Electronics", id: 0, ruta: "/categoria/electronics" },
@@ -14,14 +19,26 @@ const Header = () => {
         { name: "Women's clothing", id: 3, ruta: "/categoria/women's clothing" }
     ]
 
+    const catchInput = (e)=>{
+        const {value} = e.target;
+        setInputValue(value)
+    }
+
+    const search = ()=>{
+        console.log('aft click products', products);
+        console.log('aft click inputValue', inputValue);
+        const results = products.filter((item) =>item.name === inputValue.toLowerCase());
+        setProducts(results);
+    }
+      
     return (
         <header style={styles.header}>
             <div style={styles.container1}>
                 <Link to="/">
-                    <img style={styles.img} src={mlpng} />
+                    <img style={styles.img} alt={"logo"} src={mlpng} />
                 </Link>
-                <input placeholder="Que estas buscando?" style={styles.input} />
-                <button style={styles.button}>
+                <input value={inputValue} onChange={catchInput} placeholder="Que estas buscando?" style={styles.input} />
+                <button style={styles.button} onClick={search} >
                     <SearchIcon />
                 </button>
             </div>

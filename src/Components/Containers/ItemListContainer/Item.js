@@ -3,7 +3,7 @@ import React from "react";
 const Item = ({ item }) => {
     return(
         <div style={style.container}>
-        <img style={style.img} src={item.image} />
+        <img style={style.img} alt={'products'} src={item.image} />
         <div style={style.info}>
             <h3 style={style.title}>{item.title}</h3>
             <p style={style.price}>$ {item.price}</p>

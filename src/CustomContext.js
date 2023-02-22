@@ -8,8 +8,6 @@ export const CustomProvide = ({ children }) => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
 
-  console.log(products);
-
   return (
     <Context.Provider value={{ products, loading, setProducts, setLoading }}>
         {children}

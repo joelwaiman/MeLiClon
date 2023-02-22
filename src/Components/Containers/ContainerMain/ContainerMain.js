@@ -8,7 +8,7 @@ const ContainerMain = () => {
 
   const { products, loading, setLoading, setProducts } = useContext(Context)
   const { id } = useParams()
-  console.log(id);
+  console.log('desde products', products);
 
   const URL_BASE = 'https://fakestoreapi.com/products';
   const URL_CAT = `${URL_BASE}/category/${id}`;
