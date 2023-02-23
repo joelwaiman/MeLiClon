@@ -10,7 +10,6 @@ const Header = () => {
 
     const {products, setProducts} = useContext(Context)
     const [inputValue, setInputValue] = useState('')
-    console.log('desde header', products);
 
     const categorys = [
         { name: "Electronics", id: 0, ruta: "/categoria/electronics" },
