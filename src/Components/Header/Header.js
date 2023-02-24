@@ -24,9 +24,7 @@ const Header = () => {
     }
 
     const search = ()=>{
-        console.log('aft click products', products);
-        console.log('aft click inputValue', inputValue);
-        const results = products.filter((item) =>item.name === inputValue.toLowerCase());
+        const results = products.filter(item =>item.title.includes(inputValue));
         setProducts(results);
     }
       
