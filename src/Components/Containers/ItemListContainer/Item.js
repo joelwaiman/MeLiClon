@@ -1,15 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
-    return(
-        <div style={style.container}>
-        <img style={style.img} alt={'products'} src={item.image} />
-        <div style={style.info}>
-            <h3 style={style.title}>{item.title}</h3>
-            <p style={style.price}>$ {item.price}</p>
-        </div>
-        </div>
-        
+    return (
+        <Link to={`products/${item.id}`} style={style.link}>
+            <div style={style.container}>
+                <img style={style.img} alt={'products'} src={item.image} />
+                <div style={style.info}>
+                    <h3 style={style.title}>{item.title}</h3>
+                    <p style={style.price}>$ {item.price}</p>
+                </div>
+            </div>
+        </Link>
     )
 }
 
@@ -23,19 +25,22 @@ const style = {
         padding: '1.5rem',
         borderBottom: 'solid 0.5px #f0f0f0'
     },
-    img:{
+    img: {
         maxWidth: '6rem',
         padding: '0 1rem'
     },
-    info:{
+    info: {
         display: 'flex',
-        flexDirection:'column',
+        flexDirection: 'column',
         height: 100,
     },
-    title:{
+    title: {
         fontFamily: 'Roboto'
     },
-    price:{
+    price: {
         fontSize: '1.5rem'
+    },
+    link: {
+        textDecoration: 'none'
     }
 }

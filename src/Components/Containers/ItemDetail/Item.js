@@ -1,11 +1,10 @@
 import React from "react";
 
-const Item = ({product})=>{
-
+const Item = ({ item }) => {
     return(
-        <div>
-            
-        </div>
+        <>
+        <h1>{item.price}</h1>
+        </>
     )
 }
 
