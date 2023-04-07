@@ -83,7 +83,7 @@ const styles = {
         height: 40,
         backgroundColor: '#FFFFFF',
         border: 'transparent',
-        borderRadius: 5
+        borderRadius: 5,
     },
     button: {
         display: 'flex',
