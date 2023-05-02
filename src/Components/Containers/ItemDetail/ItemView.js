@@ -2,6 +2,7 @@ import React from "react";
 import AgricultureIcon from '@mui/icons-material/Agriculture';
 
 const ItemView = ({ item }) => {
+    
     return (
         <div style={styles.container}>
             <div style={styles.imgSection}>
@@ -13,12 +14,13 @@ const ItemView = ({ item }) => {
                     <h2>{item.title}</h2>
                 </div>
                 <p style={styles.price}>${item.price}</p>
-                <p>En 3 cuotas de ${item.price / 3} pagando con laburo</p>
+                <p>En 3 cuotas de ${(item.price / 3).toFixed(2)} </p>
                 <div style={styles.delivery}>
-                    <AgricultureIcon style={styles.icon}/>
+                    <AgricultureIcon style={styles.icon} />
                     <p>Llega cuando me contraten</p>
                 </div>
                 <h4>Stock Disponible</h4>
+                <button style={styles.button}>Agregar al carrito</button>
             </div>
         </div>
     )
@@ -54,18 +56,29 @@ const styles = {
         margin: '5rem 3.5rem',
         padding: '0 0 0 10rem'
     },
-    state:{
+    state: {
         color: '#0000008c'
     },
     price: {
         fontSize: 36,
         padding: '25px 0 0 0'
     },
-    delivery:{
+    delivery: {
         display: 'flex',
         margin: '3rem 0 3rem 0',
     },
-    icon:{
+    icon: {
         margin: '0 10px 0 0'
+    },
+    button:{
+        backgroundColor: '#3483fa',
+        color: '#FFFFFF',
+        fontSize: '17px',
+        margin: '5px 0 0',
+        width: '22rem',
+        height: '3rem',
+        padding: '0 5px',
+        borderStyle: 'none',
+        borderRadius: 5
     }
 }

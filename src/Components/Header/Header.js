@@ -83,7 +83,7 @@ const styles = {
         height: 40,
         backgroundColor: '#FFFFFF',
         border: 'transparent',
-        borderRadius: 5,
+        borderRadius: 4,
     },
     button: {
         display: 'flex',
@@ -96,7 +96,8 @@ const styles = {
         borderRadius: 5,
         alignItems: 'center',
         justifyContent: 'center',
-        color: '#adadad'
+        color: '#adadad',
+        borderLeft: '1px solid #e6e6e6'
     },
     container2: {
         display: 'flex',

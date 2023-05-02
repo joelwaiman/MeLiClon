@@ -7,7 +7,7 @@ const Item = ({ item }) => {
             <div style={style.container}>
                 <img style={style.img} alt={'products'} src={item.image} />
                 <div style={style.info}>
-                    <h3 style={style.title}>{item.title}</h3>
+                    <p style={style.title}>{item.title}</p>
                     <p style={style.price}>$ {item.price}</p>
                 </div>
             </div>
@@ -35,10 +35,12 @@ const style = {
         height: 100,
     },
     title: {
-        fontFamily: 'Roboto'
+        fontFamily: 'Roboto',
+        fontSize: 22
     },
     price: {
-        fontSize: '1.5rem'
+        fontSize: '1.5rem',
+        padding: '14px 0'
     },
     link: {
         textDecoration: 'none'
