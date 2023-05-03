@@ -12,10 +12,10 @@ const Header = () => {
     const [inputValue, setInputValue] = useState('')
 
     const categorys = [
-        { name: "Electronics", id: 0, ruta: "/categoria/electronics" },
-        { name: "Jewelery", id: 1, ruta: "/categoria/jewelery" },
-        { name: "Men's clothing", id: 2, ruta: "/categoria/men's clothing" },
-        { name: "Women's clothing", id: 3, ruta: "/categoria/women's clothing" }
+        { title: "Electronics", id: 0, route: "/category/electronics" },
+        { title: "Jewelery", id: 1, route: "/category/jewelery" },
+        { title: "Men's clothing", id: 2, route: "/category/men's clothing" },
+        { title: "Women's clothing", id: 3, route: "/category/women's clothing" }
     ]
 
     const catchInput = (e)=>{
@@ -46,7 +46,7 @@ const Header = () => {
                 </div>
                 <nav>
                     {categorys.map((category) => {
-                        return <NavLink style={styles.categorys} key={category.id} to={category.ruta}>{category.name}</NavLink>
+                        return <NavLink style={styles.categorys} key={category.id} to={category.route}>{category.title}</NavLink>
                     })}
                 </nav>
                 <ShoppingCartIcon />

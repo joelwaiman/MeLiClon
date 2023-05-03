@@ -14,7 +14,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<ContainerMain />}/>
-            <Route path="/categoria/:id" element={<ContainerMain />}/>
+            <Route path="/category/:id" element={<ContainerMain />}/>
             <Route path="/products/:idItem" element= {<ItemDetail />}/>
           </Routes>
         </CustomProvide>
