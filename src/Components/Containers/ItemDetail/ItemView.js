@@ -1,5 +1,6 @@
 import React from "react";
 import AgricultureIcon from '@mui/icons-material/Agriculture';
+import Question from "./Question/Question";
 
 const ItemView = ({ item }) => {
 
@@ -12,10 +13,10 @@ const ItemView = ({ item }) => {
                 <div style={styles.detailSeccion}>
                     <div>
                         <p style={styles.state}>Nuevo</p>
-                        <h2>{item.title}</h2>
+                        <h2 style={styles.title}>{item.title}</h2>
                     </div>
                     <p style={styles.price}>${item.price}</p>
-                    <p>En 3 cuotas de ${(item.price / 3).toFixed(2)} </p>
+                    <p style={styles.cuotas}>En 3 cuotas de ${(item.price / 3).toFixed(2)} </p>
                     <div style={styles.delivery}>
                         <AgricultureIcon style={styles.icon} />
                         <p>Llega cuando me contraten</p>
@@ -28,6 +29,7 @@ const ItemView = ({ item }) => {
                 <h2 style={styles.description}>Description</h2>
                 <p style={styles.parr}>{item.description}</p>
             </div>
+            <Question/>
         </div>
     )
 }
@@ -51,32 +53,50 @@ const styles = {
     detailSeccion: {
         display: 'flex',
         flexDirection: 'column',
-        flexWrap: 'wrap',
+        justifyContent: 'space-evenly',
         maxWidth: 350,
-        margin: '4rem 1rem',
+        fontWeight: '600',
+        margin: '1rem',
         padding: 16,
         border: 'solid 1px #D8D8D8',
-        borderRadius: 5
+        borderRadius: 5,
     },
     imgSection: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         borderBottom: '1px solid #e6e6e6',
-        margin: '5rem 3.5rem',
-        padding: '0 0 0 10rem'
+        margin: '1rem'
     },
     img: {
         maxWidth: '50%',
         maxHeight: '50%',
     },
     state: {
-        color: '#0000008c'
+        color: '#0000008c',
+        fontSize: 14,
+        fontWeight: '400'
+    },
+    title: {
+        fontSize: 22,
+        fontWeight: '600',
+        color: '#000000e6',
+        padding: '5px 0 0 0'
     },
     price: {
         fontSize: 36,
+        fontWeight: '300',
         padding: '25px 0 0 0'
+    },
+    cuotas:{
+        fontSize: 18,
+        fontWeight: '300',
     },
     delivery: {
         display: 'flex',
         margin: '3rem 0 3rem 0',
+        color: '#00a650',
+        fontWeight: '400'
     },
     icon: {
         margin: '0 10px 0 0'
@@ -99,12 +119,12 @@ const styles = {
     },
     description:{
         padding: '0 0 1.5rem 0',
-        fontWeight: '300'
+        fontWeight: '400'
     },
     parr:{
-        color:'#666',
+        color:'#666666',
         fontSize: 20,
-        fontWeight: '300',
-        letterSpacing: 1
+        fontWeight: '400',
+        letterSpacing: 0.5
     }
 }
