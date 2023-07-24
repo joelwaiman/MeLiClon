@@ -1,33 +1,34 @@
 import React from "react";
 import AgricultureIcon from '@mui/icons-material/Agriculture';
 import Question from "./Question/Question";
+import './itemView.css'
 
 const ItemView = ({ item }) => {
 
     return (
-        <div style={styles.containerMain}>
-            <div style={styles.container}>
-                <div style={styles.imgSection}>
-                    <img style={styles.img} alt="product" src={item.image} />
+        <div className="container-main-detail">
+            <div className="container-detail-info">
+                <div className="img-container">
+                    <img className="img-detail" alt="product" src={item.image} />
                 </div>
-                <div style={styles.detailSeccion}>
+                <div className="detail-container-detail">
                     <div>
-                        <p style={styles.state}>Nuevo</p>
-                        <h2 style={styles.title}>{item.title}</h2>
+                        <p className="state-detail">Nuevo</p>
+                        <h2 className="title-detail">{item.title}</h2>
                     </div>
-                    <p style={styles.price}>${item.price}</p>
-                    <p style={styles.cuotas}>En 3 cuotas de ${(item.price / 3).toFixed(2)} </p>
-                    <div style={styles.delivery}>
-                        <AgricultureIcon style={styles.icon} />
+                    <p className="price-detail">${item.price}</p>
+                    <p className="coutas-detail">En 3 cuotas de ${(item.price / 3).toFixed(2)} </p>
+                    <div className="delivery-detail">
+                        <AgricultureIcon />
                         <p>Llega cuando me contraten</p>
                     </div>
                     <h4>Stock Disponible</h4>
-                    <button style={styles.button}>Agregar al carrito</button>
+                    <button className="buttonBuy-detail">Agregar al carrito</button>
                 </div>
             </div>
-            <div style={styles.containerDescription}>
-                <h2 style={styles.description}>Description</h2>
-                <p style={styles.parr}>{item.description}</p>
+            <div className="containerDescription">
+                <h2 className="description">Description</h2>
+                <p className="parr">{item.description}</p>
             </div>
             <Question/>
         </div>
@@ -35,96 +36,3 @@ const ItemView = ({ item }) => {
 }
 
 export default ItemView;
-
-const styles = {
-    containerMain: {
-        backgroundColor: 'white',
-        width: '75vw',
-        height: '90%',
-        margin: 'auto',
-        marginTop: 100,
-        borderRadius: 2,
-        boxShadow: '1px 1px 5px #D8D8D8'
-    },
-    container: {
-        display: 'flex',
-        justifyContent: 'space-between',
-    },
-    detailSeccion: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-evenly',
-        maxWidth: 350,
-        fontWeight: '600',
-        margin: '1rem',
-        padding: 16,
-        border: 'solid 1px #D8D8D8',
-        borderRadius: 5,
-    },
-    imgSection: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderBottom: '1px solid #e6e6e6',
-        margin: '1rem'
-    },
-    img: {
-        maxWidth: '50%',
-        maxHeight: '50%',
-    },
-    state: {
-        color: '#0000008c',
-        fontSize: 14,
-        fontWeight: '400'
-    },
-    title: {
-        fontSize: 22,
-        fontWeight: '600',
-        color: '#000000e6',
-        padding: '5px 0 0 0'
-    },
-    price: {
-        fontSize: 36,
-        fontWeight: '300',
-        padding: '25px 0 0 0'
-    },
-    cuotas:{
-        fontSize: 18,
-        fontWeight: '300',
-    },
-    delivery: {
-        display: 'flex',
-        margin: '3rem 0 3rem 0',
-        color: '#00a650',
-        fontWeight: '400'
-    },
-    icon: {
-        margin: '0 10px 0 0'
-    },
-    button: {
-        backgroundColor: '#3483fa',
-        color: '#FFFFFF',
-        fontSize: '17px',
-        margin: '5px 0 0',
-        width: '22rem',
-        height: '3rem',
-        padding: '0 5px',
-        borderStyle: 'none',
-        borderRadius: 5
-    },
-    containerDescription:{
-        maxWidth: '60%',
-        margin: '0 3.5rem',
-        padding: '0 0 3rem 0'
-    },
-    description:{
-        padding: '0 0 1.5rem 0',
-        fontWeight: '400'
-    },
-    parr:{
-        color:'#666666',
-        fontSize: 20,
-        fontWeight: '400',
-        letterSpacing: 0.5
-    }
-}

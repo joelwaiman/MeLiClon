@@ -1,0 +1,14 @@
+.background {
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    width: 50%;
+    height: 90%;
+    margin: 15px auto;
+}
+
+@media(max-width: 475px){
+    .background{
+        width: 100%;
+        margin: 0;
+    }
+}

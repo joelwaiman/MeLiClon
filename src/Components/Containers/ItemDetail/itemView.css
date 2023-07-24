@@ -1,0 +1,120 @@
+.container-main-detail {
+    background-color: white;
+    width: 75%;
+    height: 90%;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px #D8D8D8;
+}
+
+.container-detail-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 350px;
+    font-weight: 600px;
+    margin: 1rem;
+    padding: 16px;
+    border: solid 1px #D8D8D8;
+    border-radius: 5px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.img-detail {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.detail-container-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 350px;
+    font-weight: 600;
+    margin: 1rem;
+    padding: 16px;
+    border: solid 1px #D8D8D8;
+    border-radius: 5px
+}
+
+.state-detail {
+    color: #0000008c;
+    font-size: 14px;
+    font-weight: 400px;
+}
+
+.title-detail {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000000e6;
+    padding: 5px 0 0 0;
+}
+
+.price-detail {
+    font-size: 36px;
+    font-weight: 300px;
+    padding: 25px 0 0 0;
+}
+
+.cuotas-detail {
+    font-Size: 18px;
+    font-weight: 300px;
+}
+
+.delivery-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 68%;
+    margin: 3rem 0 3rem 0;
+    color: #00a650;
+    font-weight: 400;
+}
+
+.icon-detail {
+    margin: '0 10px 0 0'
+}
+
+.buttonBuy-detail {
+    background-color: #3483fa;
+    color: #FFFFFF;
+    font-size: 17px;
+    margin: 5px 0 0;
+    width: 22rem;
+    height: 3rem;
+    padding: 0 5px;
+    border-style: none;
+    border-radius: 5px
+}
+
+.containerDescription {
+    max-width: 60%;
+    margin: 0 3.5rem;
+    padding: 3rem 0;
+}
+
+.description {
+    padding: 0 0 1.5rem 0;
+    font-weight: 400px
+}
+
+.parr {
+    color: #666666;
+    font-size: 20px;
+    font-weight: 400px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 475px) {}

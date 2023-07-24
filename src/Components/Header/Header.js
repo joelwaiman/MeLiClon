@@ -15,8 +15,8 @@ const Header = () => {
     const categorys = [
         { title: "Electronics", id: 0, route: "/category/electronics" },
         { title: "Jewelery", id: 1, route: "/category/jewelery" },
-        { title: "Men's clothing", id: 2, route: "/category/men's clothing" },
-        { title: "Women's clothing", id: 3, route: "/category/women's clothing" }
+        { title: "Men", id: 2, route: "/category/men's clothing" },
+        { title: "Women", id: 3, route: "/category/women's clothing" }
     ]
 
     const catchInput = (e)=>{
@@ -33,7 +33,7 @@ const Header = () => {
         <header className="header">
             <div className= 'containerInput'>
                 <Link to="/">
-                    <img className="img" alt={"logo"} src={mlpng} />
+                    <img className="imgLogo" alt={"logo"} src={mlpng} />
                 </Link>
                 <input value={inputValue} onChange={catchInput} placeholder="Que estas buscando?" className="input" />
                 <button className="button" onClick={search} >

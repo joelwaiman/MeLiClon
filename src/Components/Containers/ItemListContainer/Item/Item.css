@@ -1,0 +1,37 @@
+.link{
+    text-decoration: none;
+}
+
+.container-home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 22px;
+    border-bottom: solid 0.5px #f0f0f0;
+}
+
+.img-home{
+    max-width: 6rem;
+    padding: 0 1rem;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    height: 100;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.price-home{
+    padding: 14px 0;
+}
+
+@media(max-width: 475px){
+    .imgProduct{
+        max-width: 4rem;
+    }
+    .info{
+        font-size: 16px;
+    }
+}

@@ -1,9 +1,10 @@
 import React from "react";
-import Item from "./Item";
+import Item from "./Item/Item";
+import './itemListContainer.css'
 
 const ItemListContainer = ({ products }) => {
     return (
-        <div style={styles.background}>
+        <div className="background">
             {products.map((item) => {
                 return <Item key={item.id} item={item} />
             })}
@@ -12,13 +13,3 @@ const ItemListContainer = ({ products }) => {
 }
 
 export default ItemListContainer;
-
-const styles = {
-    background: {
-        backgroundColor: '#FFFFFF',
-        borderRadius: 3,
-        maxWidth: 744,
-        height: '90%',
-        margin: '15px auto'
-    },
-}

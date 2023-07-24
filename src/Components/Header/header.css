@@ -8,14 +8,13 @@
 .containerInput {
     display: flex;
     flex-Direction: row;
-    align-items: center;
     justify-content: center;
     width: 50%;
     margin: auto;
     padding: 10px 0;
 }
 
-.img {
+.imgLogo {
     max-width: 2.5rem;
     margin: 0 50px 0 0;
 }
@@ -41,7 +40,6 @@
     align-items: center;
     justify-content: center;
     color: #adadad;
-    border-left: 1px solid #e6e6e6;
 }
 
 .containerCategory{
@@ -71,12 +69,23 @@
 
 
 @media(max-width: 475px) {
-    header {
+    .header {
         width: 100%;
     }
 
-    container1 {
-        width: 75%;
-        margin: 0;
+    .containerInput {
+        width: 95%;
+        margin: auto
     }
-}
+    .img{
+        margin: 0 10px 0 0;
+    }
+    .containerCategory{
+        width: 95%;
+        margin: auto;
+        font-size: 11px;
+    }
+    .location{
+        width: 65px;
+    }
+}    
