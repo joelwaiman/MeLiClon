@@ -9,7 +9,8 @@ import './header.css'
 
 const Header = () => {
 
-    const {products, setProducts} = useContext(Context)
+    const { products, setProducts } = useContext(Context)
+
     const [inputValue, setInputValue] = useState('')
 
     const categorys = [
@@ -19,20 +20,25 @@ const Header = () => {
         { title: "Women", id: 3, route: "/category/women's clothing" }
     ]
 
-    const catchInput = (e)=>{
-        const {value} = e.target;
+    const catchInput = (e) => {
+        const { value } = e.target;
         setInputValue(value)
     }
 
-    const search = ()=>{
-        const results = products.filter(item =>item.title.includes(inputValue));
+    const search = () => {
+        const inputToUpperCase = inputValue.toUpperCase();
+        const results = products.filter(item => item.title.toUpperCase().includes(inputToUpperCase));
         setProducts(results);
     }
-      
+
+    const reset = () => {
+        window.location.reload()
+    }
+
     return (
         <header className="header">
-            <div className= 'containerInput'>
-                <Link to="/">
+            <div className='containerInput'>
+                <Link to="/" onClick={reset}>
                     <img className="imgLogo" alt={"logo"} src={mlpng} />
                 </Link>
                 <input value={inputValue} onChange={catchInput} placeholder="Que estas buscando?" className="input" />
