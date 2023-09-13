@@ -31,8 +31,10 @@ const Header = () => {
         setProducts(results);
     }
 
+
+
     const reset = () => {
-        window.location.reload()
+        window.location = "/"
     }
 
     return (
