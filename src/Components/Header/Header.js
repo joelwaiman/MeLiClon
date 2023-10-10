@@ -31,8 +31,6 @@ const Header = () => {
         setProducts(results);
     }
 
-
-
     const reset = () => {
         window.location = "/"
     }
@@ -44,7 +42,7 @@ const Header = () => {
                     <img className="imgLogo" alt={"logo"} src={mlpng} />
                 </Link>
                 <input value={inputValue} onChange={catchInput} placeholder="Que estas buscando?" className="input" />
-                <button className="button" onClick={search} >
+                <button className="button" onClick={search} disabled={inputValue === ''} >
                     <SearchIcon />
                 </button>
             </div>

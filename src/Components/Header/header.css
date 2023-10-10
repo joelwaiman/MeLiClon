@@ -26,6 +26,9 @@
     background-color: #FFFFFF;
     border: none;
     border-radius: 4px;
+    &:focus{
+        outline: none;
+    }
 }
 
 .button{
@@ -40,6 +43,7 @@
     align-items: center;
     justify-content: center;
     color: #adadad;
+    cursor: pointer;
 }
 
 .containerCategory{
