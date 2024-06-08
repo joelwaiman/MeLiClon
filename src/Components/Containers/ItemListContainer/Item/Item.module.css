@@ -1,0 +1,46 @@
+.link{
+    text-decoration: none;
+}
+
+.container_home {
+    display: flex;
+    max-width: 100%;
+    padding: 22px;
+    border-bottom: solid 0.5px #f0f0f0;
+}
+
+.img_home{
+    max-width: 100px;
+    margin: 0 30px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    color: #0a0a0a;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.price{
+    font-size: 24px;
+    font-weight: 400;
+    padding: 14px 0;
+}
+
+@media(max-width: 475px){
+    .container_home{
+        padding: 20px 5px;
+        gap: 10px;
+    }
+    .img_home{
+        max-width: 100px;
+        margin: 0 10px;
+    }
+    .info{
+        font-size: 16px;
+    }
+}

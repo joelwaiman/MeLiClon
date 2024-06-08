@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Question.css'
+import styles from './Question.module.css'
 
 const Question = () => {
 
@@ -18,16 +18,26 @@ const Question = () => {
     }
 
     return (
-        <div className="container-question">
-            <h2 className="title-question">Preguntale al vendedor</h2>
-            <div className="containerInput-question">
-                <input className="input-question" value={input} onChange={handlerToAdd} placeholder="Escribí tu pregunta" />
-                <button disabled={input === ''} className="button-question" onClick={addQuestion}>Preguntar</button>
+        <div className={styles.container}>
+            <h2 className={styles.title}>Preguntale al vendedor</h2>
+            <div className={styles.container_input}>
+                <input className={styles.input}
+                    value={input}
+                    onChange={handlerToAdd}
+                    placeholder="Escribí tu pregunta" />
+                <button disabled={input === ''}
+                    className={styles.button}
+                    onClick={addQuestion}>
+                    Preguntar
+                </button>
             </div>
             <div>
-                <h2 className="title-question">Ultimas preguntas</h2>
+                <h2 className={styles.title_questions}>Ultimas preguntas</h2>
                 {question.map((quest) => {
-                    return <p className="question">{quest}</p>
+                    return <p className={styles.question}
+                        key={quest}>
+                        {quest}
+                    </p>
                 })}
             </div>
         </div>
